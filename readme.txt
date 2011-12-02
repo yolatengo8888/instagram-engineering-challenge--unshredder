@@ -16,7 +16,7 @@ ruby unshredder.rb TokyoPanoramaShredded.png
 I got shredded images from the following sites.
 
 http://instagram-engineering.tumblr.com/post/12651721845/instagram-engineering-challenge-the-unshredder
-・TokyoPanoramaShredded_unshredded.png
+・TokyoPanoramaShredded.png
 
 http://www.vinceallen.com/processing/unshred/
 ・mountains64.jpg
