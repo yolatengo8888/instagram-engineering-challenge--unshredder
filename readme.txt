@@ -12,7 +12,7 @@ ex)
 ruby unshredder.rb TokyoPanoramaShredded.png
 -> TokyoPanoramaShredded_unshredded.png
 
-■source of shredded images
+■source of the shredded images
 I got shredded images from the following sites.
 
 http://instagram-engineering.tumblr.com/post/12651721845/instagram-engineering-challenge-the-unshredder
