@@ -11,3 +11,22 @@ then creating unshredded image at same directory.
 ex)
 ruby unshredder.rb TokyoPanoramaShredded.png
 -> TokyoPanoramaShredded_unshredded.png
+
+■source of shredded image
+I got shredded images from the following sites.
+
+http://instagram-engineering.tumblr.com/post/12651721845/instagram-engineering-challenge-the-unshredder
+・TokyoPanoramaShredded_unshredded.png
+
+http://www.vinceallen.com/processing/unshred/
+・mountains64.jpg
+・beach4.jpg
+・bunnies8.jpg
+・kitchen16.jpg
+・kitties32.jpg
+・tree40.jpg
+
+https://github.com/timruffles/image-deshredder/tree/gh-pages/img
+・shredded-one.jpg
+・shredded-two.jpg
+・shredded-three.jpg
