@@ -1,5 +1,5 @@
 ■requirements
-・ruby 1.9.2
+・Ruby 1.9.2
 ・RMagick 2.13.1
 
 ■usage
