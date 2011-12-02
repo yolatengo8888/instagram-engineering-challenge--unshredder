@@ -48,10 +48,10 @@ class Strip
       @srcImage = srcImage
       @left = left
       @right = right
-      @estimatedLeftStrip = nil
+      @estimatedLeftStrips = nil
       @rightStrip = nil
   end
-  attr_accessor :left, :right, :estimatedLeftStrip, :rightStrip
+  attr_accessor :left, :right, :estimatedLeftStrips, :rightStrip
     
   # 自短冊の左端と他短冊の右端の類似度を計算する（値が小さいほど類似度高）
   private
@@ -68,7 +68,7 @@ class Strip
           similarities.push({"strip" => other, 
              "degree_of_similarity" => calc_similarity(other)})
       end
-      @estimatedLeftStrip = similarities.sort{|item1, item2| 
+      @estimatedLeftStrips = similarities.sort{|item1, item2| 
           item1["degree_of_similarity"] <=> 
           item2["degree_of_similarity"]}
   end
@@ -78,7 +78,7 @@ class Strip
   def find_right_strip(strips, rank = 0)
       candidate = []
       strips.each do |other|
-          if other.estimatedLeftStrip[rank]["strip"] == self
+          if other.estimatedLeftStrips[rank]["strip"] == self
               candidate.push(other)
           end
       end
@@ -89,8 +89,8 @@ class Strip
 
       # 候補が複数ある場合、最も類似度が高いものを採用する
       return candidate.min{|item1, item2| 
-          item1.estimatedLeftStrip[rank]["degree_of_similarity"] <=> 
-          item2.estimatedLeftStrip[rank]["degree_of_similarity"]}
+          item1.estimatedLeftStrips[rank]["degree_of_similarity"] <=> 
+          item2.estimatedLeftStrips[rank]["degree_of_similarity"]}
   end  
 end 
 
