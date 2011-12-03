@@ -6,7 +6,7 @@
 typing command as follows. 
 $ ruby unshredder.rb [Shredded image filename]
 
-then creating unshredded image at the same directory.
+creating unshredded image at the same directory.
 
 ex)
 ruby unshredder.rb TokyoPanoramaShredded.png

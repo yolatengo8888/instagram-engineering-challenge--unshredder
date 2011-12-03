@@ -158,7 +158,7 @@ end
 
 # ファイル名の入力を確認する
 def parameter_valid?
-    if ARGV.length == 0
+    if ARGV.empty?
         printf("input shredded image file name.\n")
         exit
     end
