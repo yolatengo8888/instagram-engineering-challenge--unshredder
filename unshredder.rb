@@ -115,7 +115,7 @@ def detect_right_strip(strips, rank = 0, targets = nil)
     return if rank > 2
     
     rightest = []
-    targets = strips if targets == nil
+    targets ||= strips
     targets.each do |strip|
         strip.rightStrip = strip.find_right_strip(strips, rank)
         rightest.push(strip) if strip.rightStrip == nil
@@ -196,7 +196,6 @@ printf("detect strip width = %d\n", stripWidth)
 printf("detect number of strips = %d\n", numOfStrips)
 
 strips = create_strips(srcImage, stripWidth, numOfStrips)
-
 sortedStrips = sort(strips)
 
 dstFilename = File.basename(filename, ".*") + "_unshredded" + File.extname(filename)
