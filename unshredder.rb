@@ -83,10 +83,8 @@ class Strip
           end
       end
 
-      if candidate.empty?
-          return nil
-      end
-
+      return nil if candidate.empty?
+          
       # 候補が複数ある場合、最も類似度が高いものを採用する
       return candidate.min{|item1, item2| 
           item1.estimatedLeftStrips[rank]["degree_of_similarity"] <=> 
@@ -139,7 +137,6 @@ def sort(strips)
             rightStrip = strip.rightStrip
             
             if rightStrip == nil || tmpArray.include?(rightStrip)
-                # 右端
                 sorted.push(tmpArray).flatten!
                 break
             end
